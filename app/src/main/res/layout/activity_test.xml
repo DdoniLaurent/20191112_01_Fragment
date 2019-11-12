@@ -7,6 +7,11 @@
     android:orientation="vertical"
     tools:context=".TestActivity">
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/myTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/testViewPager"
         android:layout_width="match_parent"
@@ -15,23 +20,27 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="invisible">
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal">
-
             <fragment
                 android:id="@+id/firstFrag"
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
                 class="com.tioeun.a20191112_01_fragment.fragments.FirstFragment"/>
+
             <fragment
                 android:id="@+id/secondFrag"
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
                 class="com.tioeun.a20191112_01_fragment.fragments.SecondFragment"/>
+
         </LinearLayout>
+
     </HorizontalScrollView>
+
+
 </LinearLayout>
